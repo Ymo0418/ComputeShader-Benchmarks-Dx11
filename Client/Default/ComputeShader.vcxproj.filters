@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="99.Defines">
+      <UniqueIdentifier>{887820e4-0559-4b2f-b12e-a7b07c77813d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98.Default">
+      <UniqueIdentifier>{333fe189-346e-4d85-b914-bc9041234f22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.MainApp">
+      <UniqueIdentifier>{2f6c8daa-1e47-4aa8-bc57-e4a8e64f5d8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{800b6181-f54e-4e23-bfb0-5e21542ef5f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.ImGUI">
+      <UniqueIdentifier>{33988967-eb07-41d7-a57f-c8ecbf3fce0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Objects">
+      <UniqueIdentifier>{35968398-ab5d-4bfa-b144-3067c8b44fb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.InputDevice">
+      <UniqueIdentifier>{ebf777d2-774e-4457-8e81-b0f1e96cdf94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.GraphicDevice">
+      <UniqueIdentifier>{d600bc6a-faf6-4c82-bfb0-273023bbe7da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Components">
+      <UniqueIdentifier>{0d6b95c6-93fb-4f7d-b958-07462052da96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Timer">
+      <UniqueIdentifier>{0ee9338c-c5cb-4451-874f-105b15bf1cd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="96.ShaderFiles">
+      <UniqueIdentifier>{f77d8c3a-ca63-44b4-84f1-c52638c60858}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Objects\Camera">
+      <UniqueIdentifier>{31cf4477-2c81-4441-bf99-a33f794f626f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Objects\Emitter">
+      <UniqueIdentifier>{9e91ff24-9877-4bda-94fa-6bbda69aba6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Objects\UI">
+      <UniqueIdentifier>{61d4ed5d-862a-4f21-a0d9-98aaefc056cc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ComputeShader.h">
+      <Filter>98.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>98.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>98.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>98.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Defines.h">
+      <Filter>99.Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Macro.h">
+      <Filter>99.Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CMainApp.h">
+      <Filter>00.MainApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CTimer.h">
+      <Filter>03.Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CBase.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Struct.h">
+      <Filter>99.Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CGraphic_Device.h">
+      <Filter>01.GraphicDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Typedef.h">
+      <Filter>99.Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Function.h">
+      <Filter>99.Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\Inc\ImGUI\imgui.h">
+      <Filter>97.ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\Inc\ImGUI\imgui_impl_dx11.h">
+      <Filter>97.ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\Inc\ImGUI\imgui_impl_win32.h">
+      <Filter>97.ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\Inc\ImGUI\imgui_internal.h">
+      <Filter>97.ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\Inc\ImGUI\imgui_stdlib.h">
+      <Filter>97.ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CBuffer.h">
+      <Filter>04.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CShader.h">
+      <Filter>04.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CInput_Device.h">
+      <Filter>02.InputDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CEmitter.h">
+      <Filter>03.Objects\Emitter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CImGUI.h">
+      <Filter>03.Objects\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CCamera.h">
+      <Filter>03.Objects\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CBuffer_CPU.h">
+      <Filter>04.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CEmitter_CPU.h">
+      <Filter>04.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CBuffer_GPU.h">
+      <Filter>04.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CEmitter_GPU.h">
+      <Filter>04.Components</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="ComputeShader.ico">
+      <Filter>98.Default</Filter>
+    </Image>
+    <Image Include="small.ico">
+      <Filter>98.Default</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ComputeShader.rc">
+      <Filter>98.Default</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ComputeShader.cpp">
+      <Filter>98.Default</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CMainApp.cpp">
+      <Filter>00.MainApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CTimer.cpp">
+      <Filter>03.Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CBase.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CGraphic_Device.cpp">
+      <Filter>01.GraphicDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui.cpp">
+      <Filter>97.ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_demo.cpp">
+      <Filter>97.ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_draw.cpp">
+      <Filter>97.ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_impl_dx11.cpp">
+      <Filter>97.ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_impl_win32.cpp">
+      <Filter>97.ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_stdlib.cpp">
+      <Filter>97.ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_tables.cpp">
+      <Filter>97.ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_widgets.cpp">
+      <Filter>97.ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Struct.cpp">
+      <Filter>99.Defines</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CBuffer.cpp">
+      <Filter>04.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CShader.cpp">
+      <Filter>04.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CInput_Device.cpp">
+      <Filter>02.InputDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CEmitter.cpp">
+      <Filter>03.Objects\Emitter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CImGUI.cpp">
+      <Filter>03.Objects\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CCamera.cpp">
+      <Filter>03.Objects\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CBuffer_CPU.cpp">
+      <Filter>04.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CEmitter_CPU.cpp">
+      <Filter>04.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CEmitter_GPU.cpp">
+      <Filter>04.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CBuffer_GPU.cpp">
+      <Filter>04.Components</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\SDK\Inc\ImGUI\imgui.natstepfilter">
+      <Filter>97.ImGUI</Filter>
+    </None>
+    <None Include="..\Bin\ShaderFiles\CS_ParticleGlobal.hlsli">
+      <Filter>96.ShaderFiles</Filter>
+    </None>
+    <None Include="..\Bin\ShaderFiles\Shader_Defines.hlsli">
+      <Filter>96.ShaderFiles</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\..\SDK\Inc\ImGUI\imgui.natvis">
+      <Filter>97.ImGUI</Filter>
+    </Natvis>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Bin\ShaderFiles\CS_Emit.hlsl">
+      <Filter>96.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\ShaderFiles\CS_Reset.hlsl">
+      <Filter>96.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\ShaderFiles\CS_Update.hlsl">
+      <Filter>96.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_GPU.hlsl">
+      <Filter>96.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_CPU.hlsl">
+      <Filter>96.ShaderFiles</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>
