@@ -210,18 +210,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\SDK\Inc\ImGUI\imgui.natstepfilter" />
-    <None Include="..\Bin\ShaderFiles\CS_ParticleGlobal.hlsli" />
-    <None Include="..\Bin\ShaderFiles\Shader_Defines.hlsli" />
+    <None Include="..\ShaderFiles\CS_ParticleGlobal.hlsli" />
+    <None Include="..\ShaderFiles\Shader_Defines.hlsli" />
   </ItemGroup>
   <ItemGroup>
     <Natvis Include="..\..\SDK\Inc\ImGUI\imgui.natvis" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="..\Bin\ShaderFiles\CS_Emit.hlsl" />
-    <FxCompile Include="..\Bin\ShaderFiles\CS_Reset.hlsl" />
-    <FxCompile Include="..\Bin\ShaderFiles\CS_Update.hlsl" />
-    <FxCompile Include="..\Bin\ShaderFiles\Shader_CPU.hlsl" />
-    <FxCompile Include="..\Bin\ShaderFiles\Shader_GPU.hlsl" />
+    <FxCompile Include="..\ShaderFiles\CS_Emit.hlsl" />
+    <FxCompile Include="..\ShaderFiles\CS_Reset.hlsl" />
+    <FxCompile Include="..\ShaderFiles\CS_Update.hlsl" />
+    <FxCompile Include="..\ShaderFiles\Shader_CPU.hlsl" />
+    <FxCompile Include="..\ShaderFiles\Shader_GPU.hlsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -221,10 +221,10 @@
     <None Include="..\..\SDK\Inc\ImGUI\imgui.natstepfilter">
       <Filter>97.ImGUI</Filter>
     </None>
-    <None Include="..\Bin\ShaderFiles\CS_ParticleGlobal.hlsli">
+    <None Include="..\ShaderFiles\Shader_Defines.hlsli">
       <Filter>96.ShaderFiles</Filter>
     </None>
-    <None Include="..\Bin\ShaderFiles\Shader_Defines.hlsli">
+    <None Include="..\ShaderFiles\CS_ParticleGlobal.hlsli">
       <Filter>96.ShaderFiles</Filter>
     </None>
   </ItemGroup>
@@ -234,19 +234,19 @@
     </Natvis>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="..\Bin\ShaderFiles\CS_Emit.hlsl">
+    <FxCompile Include="..\ShaderFiles\CS_Reset.hlsl">
       <Filter>96.ShaderFiles</Filter>
     </FxCompile>
-    <FxCompile Include="..\Bin\ShaderFiles\CS_Reset.hlsl">
+    <FxCompile Include="..\ShaderFiles\CS_Update.hlsl">
       <Filter>96.ShaderFiles</Filter>
     </FxCompile>
-    <FxCompile Include="..\Bin\ShaderFiles\CS_Update.hlsl">
+    <FxCompile Include="..\ShaderFiles\Shader_CPU.hlsl">
       <Filter>96.ShaderFiles</Filter>
     </FxCompile>
-    <FxCompile Include="..\Bin\ShaderFiles\Shader_GPU.hlsl">
+    <FxCompile Include="..\ShaderFiles\Shader_GPU.hlsl">
       <Filter>96.ShaderFiles</Filter>
     </FxCompile>
-    <FxCompile Include="..\Bin\ShaderFiles\Shader_CPU.hlsl">
+    <FxCompile Include="..\ShaderFiles\CS_Emit.hlsl">
       <Filter>96.ShaderFiles</Filter>
     </FxCompile>
   </ItemGroup>

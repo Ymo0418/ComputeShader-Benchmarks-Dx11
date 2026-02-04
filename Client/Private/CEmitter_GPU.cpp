@@ -11,7 +11,7 @@ CEmitter_GPU::CEmitter_GPU(ID3D11Device* _pDevice, ID3D11DeviceContext* _pContex
 HRESULT CEmitter_GPU::Initialize()
 {
     CHECK_NULPTR((m_pShader = CShader::Create(m_pDevice, m_pContext, 
-        TEXT("../Bin/ShaderFiles/Shader_GPU.hlsl"), PARTICLE_DATA::Elements, PARTICLE_DATA::iNumElement)));
+        TEXT("../ShaderFiles/Shader_GPU.hlsl"), PARTICLE_DATA::Elements, PARTICLE_DATA::iNumElement)));
     CHECK_NULPTR((m_pBuffer = CBuffer_GPU::Create(m_pDevice, m_pContext)));
 
     D3D11_BUFFER_DESC Desc;

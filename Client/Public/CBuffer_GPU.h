@@ -8,7 +8,7 @@ class CBuffer_GPU : public CBuffer
 public:
     typedef struct tagForRender{
         _float4 vColor;
-        _float3 vViewPosition;
+        _float3 vWorldPosition;
         float  fScale;
     }FOR_RENDER;
     typedef struct tagForUpdate {
