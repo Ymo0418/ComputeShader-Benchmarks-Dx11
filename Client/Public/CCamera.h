@@ -30,6 +30,7 @@ public:
 	void			Get_CameraMat(_float4x4* _pOut, MATRIX_STATE _eState);
 
 protected:	
+	_vector					m_vLook			= { };
 	_vector					m_vEye			= { };
 	_vector					m_vAt			= { };
 	float					m_fFovy			= { 0.f };

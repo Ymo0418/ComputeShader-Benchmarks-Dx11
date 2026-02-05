@@ -10,7 +10,7 @@ CBuffer::CBuffer(ID3D11Device* _pDevice, ID3D11DeviceContext* _pContext)
 HRESULT CBuffer::Initialize()
 {
 	m_iMaxParticle = 2 << 24;
-	m_iEmitNum = 100000;
+	m_iEmitNum = 100;//100000;
 
 	return S_OK;
 }

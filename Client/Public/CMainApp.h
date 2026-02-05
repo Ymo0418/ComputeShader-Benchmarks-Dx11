@@ -29,7 +29,7 @@ private:
 
     deque<float>            DequeFrameTimes;
     float                   m_fAccum                = { 0.f };
-    const float             m_fRecordTime           = { 10.f };
+    const float             m_fRecordTime           = { 5.f };
     bool                    m_bEmit_CPU             = { false };
     const                   uint* m_vParticleNum[2] = { nullptr, nullptr };
 

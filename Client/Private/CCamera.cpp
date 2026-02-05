@@ -26,7 +26,8 @@ uint CCamera::DestroyInstance()
 
 HRESULT CCamera::Initialize() 
 {
-	m_vEye = { 0.f, 50.f, -150.f, 1.f };
+	m_vLook = { 0.f, 0.f, 0.f, 0.f };
+	m_vEye = { 0.f, 0.f, -150.f, 1.f };
 	m_vAt  = { 0.f, 0.f, 0.f, 1.f };
 	m_fFovy = XMConvertToRadians(60.f);
 	m_fAspect = (float)g_iWinSizeX / g_iWinSizeY;
@@ -52,27 +53,29 @@ HRESULT CCamera::Initialize()
 
 void CCamera::Update(float _fTimeDelta) 
 {
-	if (CInput_Device::GetInstance()->Get_DIKey(DIK_W))
-		m_vEye = XMVectorSetZ(m_vEye, XMVectorGetZ(m_vEye) + 1);
-	if (CInput_Device::GetInstance()->Get_DIKey(DIK_S))
-		m_vEye = XMVectorSetZ(m_vEye, XMVectorGetZ(m_vEye) - 1);
-	if (CInput_Device::GetInstance()->Get_DIKey(DIK_A))
-		m_vEye = XMVectorSetY(m_vEye, XMVectorGetY(m_vEye) + 1);
-	if (CInput_Device::GetInstance()->Get_DIKey(DIK_D))
-		m_vEye = XMVectorSetY(m_vEye, XMVectorGetY(m_vEye) - 1);
+	if (CInput_Device::GetInstance()->Get_DIMousePressing(DIMK_RB))
+	{
+		long move = { 0 };
 
-	_float4x4 m_matWorld = {};
+		if (move = CInput_Device::GetInstance()->Get_DIMouseMove(DIMM_X))
+		{
+			m_vLook = XMVectorSetY(m_vLook, XMVectorGetY(m_vLook) + move * _fTimeDelta);
+		}
+		if (move = CInput_Device::GetInstance()->Get_DIMouseMove(DIMM_Y))
+		{
+			m_vLook = XMVectorSetX(m_vLook, XMVectorGetX(m_vLook) + move * _fTimeDelta);
+		}
+	}
 
-	_vector vLook = m_vAt - m_vEye;
-	_vector vRight = XMVector3Cross(XMVectorSet(0.f, 1.f, 0.f, 0.f), vLook);
-	_vector vUp = XMVector3Cross(vLook, vRight);
+	_matrix matRot	 = XMMatrixRotationRollPitchYaw(XMVectorGetX(m_vLook), XMVectorGetY(m_vLook), XMVectorGetZ(m_vLook));
+	_matrix matTrans = XMMatrixTranslation(XMVectorGetX(m_vEye), XMVectorGetY(m_vEye), XMVectorGetZ(m_vEye));
 
-	XMStoreFloat4((_float4*)(&(m_matWorld.m[0][0])), XMVector3Normalize(vRight));
-	XMStoreFloat4((_float4*)(&(m_matWorld.m[1][0])), XMVector3Normalize(vUp));
-	XMStoreFloat4((_float4*)(&(m_matWorld.m[2][0])), XMVector3Normalize(vLook));
-	XMStoreFloat4((_float4*)(&(m_matWorld.m[3][0])), m_vEye);
 
-	XMStoreFloat4x4(&m_matFormation[MAT_VIEW], XMMatrixInverse(nullptr, XMLoadFloat4x4(&m_matWorld)));
+	_float4x4 matWorld = {};
+
+	XMStoreFloat4x4(&matWorld, matTrans * matRot);
+
+	XMStoreFloat4x4(&m_matFormation[MAT_VIEW], XMMatrixInverse(nullptr, XMLoadFloat4x4(&matWorld)));
 	XMStoreFloat4x4(&m_matFormation[MAT_PROJ], XMMatrixPerspectiveFovLH(m_fFovy, m_fAspect, m_fNear, m_fFar));
 }
 

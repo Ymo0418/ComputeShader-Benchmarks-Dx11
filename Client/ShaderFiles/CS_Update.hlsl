@@ -3,12 +3,11 @@
 struct ForRender
 {
     float4  vColor;
-    float3  vWorldPosition;
+    float3  vWorldPos;
     float   fScale;
 };
 struct ForUpdate
 {
-    float3  vWorldPos;
     float3  vWorldVelocity;
     float2  vLifeTime;
 };
@@ -65,8 +64,7 @@ void CS_UPDATE(uint3 DTid : SV_DispatchThreadID     /* Which in Whole Group xyz 
             
             float3 vViewPosition;
 
-            PU.vWorldPos.xyz = PU.vWorldPos.xyz + PU.vWorldVelocity.xyz * g_fTimeDelta;
-            PR.vWorldPosition = PU.vWorldPos;
+            PR.vWorldPos.xyz = PR.vWorldPos.xyz + PU.vWorldVelocity.xyz * g_fTimeDelta;
         }
     }
        

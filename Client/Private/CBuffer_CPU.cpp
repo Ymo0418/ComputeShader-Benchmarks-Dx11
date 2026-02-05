@@ -98,17 +98,12 @@ void CBuffer_CPU::Update_Emit(float _fTimeDelta)
 			int Idx = m_iLiveParticle + i;
 
 			XMStoreFloat4(&m_Particles[Idx].vColor, m_tConstInfos.vStartColor);
-
-			random_device					 randomDevice;
-			mt19937							 gen(randomDevice());
-			uniform_real_distribution<float> dis(-1.f, 1.f);
-
-			_vector vPos = { 0.1f, 0.1f, 0.1f, 1.f };
-			//_vector vPos = {
-			//	(((float)rand() / (float)RAND_MAX) * 2.0f - 1.0f) * m_tConstInfos.vRange.x,
-			//	(((float)rand() / (float)RAND_MAX) * 2.0f - 1.0f) * m_tConstInfos.vRange.y,
-			//	(((float)rand() / (float)RAND_MAX) * 2.0f - 1.0f) * m_tConstInfos.vRange.z, 1.f };
-			XMStoreFloat3(&m_Particles[Idx].vWorldPos, vPos);
+						
+			_vector vPos = {
+				(((float)rand() / (float)RAND_MAX) * 2.0f - 1.0f) * m_tConstInfos.vRange.x,
+				(((float)rand() / (float)RAND_MAX) * 2.0f - 1.0f) * m_tConstInfos.vRange.y,
+				(((float)rand() / (float)RAND_MAX) * 2.0f - 1.0f) * m_tConstInfos.vRange.z, 1.f };
+			XMStoreFloat3(&m_Particles[Idx].vWorldPos, XMVectorMultiply(XMVector3Normalize(vPos), XMLoadFloat3(&m_tConstInfos.vRange)));
 
 			_vector vVel = XMVector3Normalize(vPos - m_tConstInfos.vPivot) * m_tConstInfos.fSpeed;
 			XMStoreFloat3(&m_Particles[Idx].vWorldVelocity, vVel);

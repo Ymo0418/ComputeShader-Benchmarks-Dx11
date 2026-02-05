@@ -329,17 +329,17 @@ HRESULT CBuffer_GPU::Initialize_ComputeShader()
 	iHlslFlag = D3DCOMPILE_OPTIMIZATION_LEVEL1;
 #endif
 
-	hr = D3DCompileFromFile(TEXT("../Bin/ShaderFiles/CS_Emit.hlsl"), nullptr,
+	hr = D3DCompileFromFile(TEXT("../ShaderFiles/CS_Emit.hlsl"), nullptr,
 		D3D_COMPILE_STANDARD_FILE_INCLUDE, "CS_EMIT", "cs_5_0", iHlslFlag, 0, &pShaderBlob, &pErrorBlob);
 	CHECK_FAILED(Check_CS(hr, pShaderBlob, pErrorBlob));
 	CHECK_FAILED(Create_CS(&m_pCS_Emit, pShaderBlob));
 
-	hr = D3DCompileFromFile(TEXT("../Bin/ShaderFiles/CS_Update.hlsl"), nullptr,
+	hr = D3DCompileFromFile(TEXT("../ShaderFiles/CS_Update.hlsl"), nullptr,
 		D3D_COMPILE_STANDARD_FILE_INCLUDE, "CS_UPDATE", "cs_5_0", iHlslFlag, 0, &pShaderBlob, &pErrorBlob);
 	CHECK_FAILED(Check_CS(hr, pShaderBlob, pErrorBlob));
 	CHECK_FAILED(Create_CS(&m_pCS_Update, pShaderBlob));
 
-	hr = D3DCompileFromFile(TEXT("../Bin/ShaderFiles/CS_Reset.hlsl"), nullptr,
+	hr = D3DCompileFromFile(TEXT("../ShaderFiles/CS_Reset.hlsl"), nullptr,
 		D3D_COMPILE_STANDARD_FILE_INCLUDE, "CS_RESET", "cs_5_0", iHlslFlag, 0, &pShaderBlob, &pErrorBlob);
 	CHECK_FAILED(Check_CS(hr, pShaderBlob, pErrorBlob));
 	CHECK_FAILED(Create_CS(&m_pCS_Reset, pShaderBlob));

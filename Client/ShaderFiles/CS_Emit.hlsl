@@ -3,12 +3,11 @@
 struct ForRender
 {
     float4  vColor;
-    float3  vViewPosition;
+    float3  vWorldPos;
     float   fScale;
 };
 struct ForUpdate
 {
-    float3  vWorldPos;
     float3  vWorldVelocity;
     float2  vLifeTime;
 };
@@ -46,12 +45,9 @@ void CS_EMIT(uint3 DTid : SV_DispatchThreadID /* Which in Whole Group xyz */
         float2 vRandomUV = float2((DTid.x + iEmitOffset) / 1024.0, g_fAccumTime);
         float4 vRandom = RandomBuffer.SampleLevel(SamplerWrapLinear, vRandomUV, 0);
         float4 vSingedRandom = vRandom * 2.f - 1.f;
-                
-        float3 vPivot     = Emit_Pivot;
-        float3 vRandomPos = vSingedRandom.xyz * Emit_Range.xyz;
-                
-        PU.vWorldPos = vRandomPos.xyz;
-        PU.vWorldVelocity = vRandomPos - Emit_Pivot;
+                                
+        PR.vWorldPos = normalize(vSingedRandom.xyz) * Emit_Range.xyz;
+        PU.vWorldVelocity = PR.vWorldPos - Emit_Pivot;
                 
         float fLifeTime = lerp(Emit_LifeTime.x, Emit_LifeTime.y, vRandom.a);
         PU.vLifeTime = float2(fLifeTime, fLifeTime);

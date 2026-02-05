@@ -92,7 +92,7 @@ void CMainApp::Render_UI()
 	ImGui::Text("Cur  FPS : %.2f", ImGui::GetIO().Framerate);
 	ImGui::Text("Aver FPS: %.2f", fAverage);
 
-	if (ImGui::Button(m_bEmit_CPU ? "CPU" : "GPU"))
+	if (ImGui::Button(m_bEmit_CPU ? "Current CPU" : "Current GPU"))
 	{
 		m_bEmit_CPU = !m_bEmit_CPU;
 		Safe_Release(m_pEmitter);
@@ -103,6 +103,9 @@ void CMainApp::Render_UI()
 			m_pEmitter = CEmitter_GPU::Create(m_pDevice, m_pContext);
 
 		m_pEmitter->Bind_UI(m_vParticleNum);
+
+		DequeFrameTimes.clear();
+		m_fAccum = 0.f;
 	}
 
 	ImGui::End();

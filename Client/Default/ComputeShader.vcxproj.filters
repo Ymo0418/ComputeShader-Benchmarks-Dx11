@@ -43,6 +43,24 @@
     <Filter Include="03.Objects\UI">
       <UniqueIdentifier>{61d4ed5d-862a-4f21-a0d9-98aaefc056cc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="03.Objects\Emitter\GPU">
+      <UniqueIdentifier>{4a7dc1ac-2834-44ae-b60a-ccffcd4de577}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Objects\Emitter\CPU">
+      <UniqueIdentifier>{96aa3638-a4fd-4b7c-bf66-ecb76d4e2f7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Components\Buffer">
+      <UniqueIdentifier>{75750c16-b04f-46dc-a692-eef8132781d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Components\Buffer\GPU">
+      <UniqueIdentifier>{c2b0d035-9d41-4f23-b07b-85b53bae39e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Components\Buffer\CPU">
+      <UniqueIdentifier>{56a25399-f355-4f7e-8832-1d0820f1b9bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Components\Shader">
+      <UniqueIdentifier>{f61f8bc9-7d13-4916-858e-8e19ad218221}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ComputeShader.h">
@@ -99,12 +117,6 @@
     <ClInclude Include="..\..\SDK\Inc\ImGUI\imgui_stdlib.h">
       <Filter>97.ImGUI</Filter>
     </ClInclude>
-    <ClInclude Include="..\Public\CBuffer.h">
-      <Filter>04.Components</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Public\CShader.h">
-      <Filter>04.Components</Filter>
-    </ClInclude>
     <ClInclude Include="..\Public\CInput_Device.h">
       <Filter>02.InputDevice</Filter>
     </ClInclude>
@@ -117,17 +129,23 @@
     <ClInclude Include="..\Public\CCamera.h">
       <Filter>03.Objects\Camera</Filter>
     </ClInclude>
-    <ClInclude Include="..\Public\CBuffer_CPU.h">
-      <Filter>04.Components</Filter>
-    </ClInclude>
     <ClInclude Include="..\Public\CEmitter_CPU.h">
-      <Filter>04.Components</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Public\CBuffer_GPU.h">
-      <Filter>04.Components</Filter>
+      <Filter>03.Objects\Emitter\CPU</Filter>
     </ClInclude>
     <ClInclude Include="..\Public\CEmitter_GPU.h">
-      <Filter>04.Components</Filter>
+      <Filter>03.Objects\Emitter\GPU</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CBuffer.h">
+      <Filter>04.Components\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CBuffer_CPU.h">
+      <Filter>04.Components\Buffer\CPU</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CBuffer_GPU.h">
+      <Filter>04.Components\Buffer\GPU</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CShader.h">
+      <Filter>04.Components\Shader</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -186,12 +204,6 @@
     <ClCompile Include="..\Private\Struct.cpp">
       <Filter>99.Defines</Filter>
     </ClCompile>
-    <ClCompile Include="..\Private\CBuffer.cpp">
-      <Filter>04.Components</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Private\CShader.cpp">
-      <Filter>04.Components</Filter>
-    </ClCompile>
     <ClCompile Include="..\Private\CInput_Device.cpp">
       <Filter>02.InputDevice</Filter>
     </ClCompile>
@@ -204,17 +216,23 @@
     <ClCompile Include="..\Private\CCamera.cpp">
       <Filter>03.Objects\Camera</Filter>
     </ClCompile>
-    <ClCompile Include="..\Private\CBuffer_CPU.cpp">
-      <Filter>04.Components</Filter>
-    </ClCompile>
     <ClCompile Include="..\Private\CEmitter_CPU.cpp">
-      <Filter>04.Components</Filter>
+      <Filter>03.Objects\Emitter\CPU</Filter>
     </ClCompile>
     <ClCompile Include="..\Private\CEmitter_GPU.cpp">
-      <Filter>04.Components</Filter>
+      <Filter>03.Objects\Emitter\GPU</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CBuffer.cpp">
+      <Filter>04.Components\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CBuffer_CPU.cpp">
+      <Filter>04.Components\Buffer\CPU</Filter>
     </ClCompile>
     <ClCompile Include="..\Private\CBuffer_GPU.cpp">
-      <Filter>04.Components</Filter>
+      <Filter>04.Components\Buffer\GPU</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CShader.cpp">
+      <Filter>04.Components\Shader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

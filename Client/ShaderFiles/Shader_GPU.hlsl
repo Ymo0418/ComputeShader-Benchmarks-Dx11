@@ -4,7 +4,7 @@
 struct ForRender
 {
     float4 vColor;
-    float3 vViewPosition;
+    float3 vWorldPos;
     float fScale;
 };
 
@@ -25,7 +25,7 @@ VS_OUT_BASE VS_BASE(uint InstanceId : SV_InstanceID)
     ForRender PR = Particles[IndexBuffer[InstanceId]];
     
     Out.vColor = PR.vColor;
-    Out.vViewPosition = PR.vViewPosition;
+    Out.vViewPosition = mul(float4(PR.vWorldPos, 1.f), g_matView).xyz;
     Out.fScale = PR.fScale;
         
     return Out;
